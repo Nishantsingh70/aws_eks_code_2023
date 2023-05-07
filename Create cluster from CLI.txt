@@ -1,0 +1,14 @@
+eksctl create cluster --name my-basic-cluster 
+--region  ap-south-1  
+--version 1.25  
+--nodegroup-name  ng-basic-node 
+--instance-types t2.small   
+--nodes 3 
+--nodes-min  2  
+--nodes-max 4  
+--node-volume-size 15  
+--node-volume-type gp3  
+--enable-ssm  
+--ssh-access  
+-instance-name kuber-workernode 
+--managed

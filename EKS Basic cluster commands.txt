@@ -1,0 +1,26 @@
+cd Desktop
+cd EKS
+dir
+mkdir Advance_code
+cd Advance_code
+dir
+eksctl version
+eksctl create cluster --name cluster1 --kubeconfig kube-cluster1.config --enable-ssm
+eksctl delete cluster --name cluster1
+eksctl create cluster --name cluster1 --kubeconfig kube-cluster1.config --enable-ssm  --instance-types t2.micro  --nodes 3
+ls
+dir
+notepad kube-cluster1.config
+kubectl get pods
+kubectl get pods --kubeconfig kube-cluster1.config
+kubectl get sc --kubeconfig kube-cluster1.config
+kubectl get pv --kubeconfig kube-cluster1.config
+kubectl get pvc --kubeconfig kube-cluster1.config
+kubectl get sc --kubeconfig kube-cluster1.config
+kubectl describe sc gp2 --kubeconfig kube-cluster1.config
+kubectl get configmap -n kube-system --kubeconfig kube-cluster1.config
+kubectl get configmap aws-auth -n kube-system --kubeconfig kube-cluster1.config
+kubectl describe configmap aws-auth -n kube-system --kubeconfig kube-cluster1.config
+doskey /history 
+eksctl get addon --cluster cluster1
+ 

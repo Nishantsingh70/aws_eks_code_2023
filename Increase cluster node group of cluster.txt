@@ -1,0 +1,1 @@
+eksctl scale nodegroup --cluster my-basic-cluster --name ng-basic-node  --nodes 4
